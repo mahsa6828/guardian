@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@drawable/profile"
+            android:id="@+id/img_rc"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_width="86dp"
+            android:layout_height="86dp"/>
+        <LinearLayout
+            android:id="@+id/alltxt"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/img_rc"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/img_rc"
+                android:text="Android Studio 1.4 introduced limited compatibility support for vector"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020/04/16"
+                android:layout_below="@id/txt_title"
+                android:layout_toRightOf="@id/img_rc"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
