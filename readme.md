@@ -1,5 +1,4 @@
 ## Guardian Test App - Mahsa
 
 
-- Item 1
-- Item 2
+This is an application to fetch and display news articles from Guardian API
