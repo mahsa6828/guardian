@@ -11,11 +11,16 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.guardian.R;
+import com.example.guardian.model.News;
+
+import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
     Context context;
-    public NewsAdapter(Context context){
+    List<News> newsList;
+    public NewsAdapter(Context context,List<News> newsList){
         this.context=context;
+        this.newsList=newsList;
 
     }
     @NonNull
@@ -28,12 +33,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
 
     @Override
     public void onBindViewHolder(@NonNull NewsVH holder, int position) {
+        News news = newsList.get(position);
+        holder.txt_title.setText(news.getWebTitle());
+        holder.txt_date.setText(news.getWebPublicationDate());
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return newsList.size();
     }
 
     class NewsVH extends RecyclerView.ViewHolder{
