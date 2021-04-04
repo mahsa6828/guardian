@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(String errorResponseMessage) {
-
+                Log.e("Guardian Service","Error Message Was: "+errorResponseMessage);
             }
         });
 
