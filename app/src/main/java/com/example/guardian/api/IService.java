@@ -1,7 +1,5 @@
 package com.example.guardian.api;
 
-import com.example.guardian.model.News;
-
 import java.util.List;
 
 import retrofit2.Call;

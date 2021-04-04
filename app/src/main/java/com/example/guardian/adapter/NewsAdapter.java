@@ -11,7 +11,6 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.guardian.R;
-import com.example.guardian.model.News;
 
 import java.util.List;
 

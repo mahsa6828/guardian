@@ -3,7 +3,6 @@ package com.example.guardian.api;
 import android.util.Log;
 
 import com.example.guardian.model.IMessageListener;
-import com.example.guardian.model.News;
 
 import java.util.List;
 
