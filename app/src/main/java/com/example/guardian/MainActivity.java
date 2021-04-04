@@ -11,6 +11,7 @@ import android.util.Log;
 import com.example.guardian.adapter.NewsAdapter;
 import com.example.guardian.api.WebServiceCaller;
 import com.example.guardian.model.IMessageListener;
+import com.example.guardian.model.Result;
 
 import java.util.List;
 
@@ -18,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     WebServiceCaller webServiceCaller;
     Toolbar toolbar;
     RecyclerView recyclerView;
-    List<News> newsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onsucess(Object responseMessage) {
                 Log.e("","");
-                NewsAdapter newsAdapter = new NewsAdapter(getApplicationContext(),(List<News>) responseMessage);
+                NewsAdapter newsAdapter = new NewsAdapter(getApplicationContext(),(List<Result>) responseMessage);
                 recyclerView.setAdapter(newsAdapter);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),RecyclerView.VERTICAL,false));
 
