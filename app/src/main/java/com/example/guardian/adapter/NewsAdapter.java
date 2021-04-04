@@ -16,6 +16,8 @@ import com.example.guardian.model.Result;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
     Context context;
     List<Result> resultList;
@@ -46,7 +48,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
     }
 
     class NewsVH extends RecyclerView.ViewHolder{
-        AppCompatImageView img_rc;
+        CircleImageView img_rc;
         AppCompatTextView txt_title,txt_date;
 
         public NewsVH(@NonNull View itemView) {

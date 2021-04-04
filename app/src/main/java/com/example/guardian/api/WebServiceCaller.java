@@ -17,16 +17,16 @@ public class WebServiceCaller {
        iService = ApiClient.getRetrofit().create(IService.class);
     }
     public void getNews(IMessageListener listener){
-        Call<List<News>> call = iService.getNews();
-        call.enqueue(new Callback<List<News>>() {
+        Call<News> call = iService.getNews();
+        call.enqueue(new Callback<News>() {
             @Override
-            public void onResponse(Call<List<News>> call, Response<List<News>> response) {
+            public void onResponse(Call<News> call, Response<News> response) {
                 listener.onsucess(response.body());
                 Log.e("","");
             }
 
             @Override
-            public void onFailure(Call<List<News>> call, Throwable t) {
+            public void onFailure(Call<News> call, Throwable t) {
                 listener.onFailure(t.getMessage().toString());
                 Log.e("","");
             }
