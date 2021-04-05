@@ -24,6 +24,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
     Context context;
     List<Result> resultList;
 
+
     public NewsAdapter(Context context,List<Result> resultList){
         this.context=context;
         this.resultList=resultList;

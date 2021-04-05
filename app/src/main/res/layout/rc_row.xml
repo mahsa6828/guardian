@@ -10,8 +10,8 @@
             android:src="@drawable/profile"
             android:id="@+id/img_rc"
             android:layout_centerVertical="true"
-            android:layout_width="86dp"
-            android:layout_height="86dp"/>
+            android:layout_width="76dp"
+            android:layout_height="76dp"/>
         <LinearLayout
             android:id="@+id/alltxt"
             android:layout_marginLeft="16dp"
