@@ -23,11 +23,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
     Context context;
     List<Result> resultList;
-    List<Fields> fieldsList;
-    public NewsAdapter(Context context,List<Result> resultList,List<Fields> fieldsList){
+
+    public NewsAdapter(Context context,List<Result> resultList){
         this.context=context;
         this.resultList=resultList;
-        this.fieldsList=fieldsList;
 
     }
     @NonNull
@@ -41,10 +40,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
     @Override
     public void onBindViewHolder(@NonNull NewsVH holder, int position) {
         Result result = resultList.get(position);
-        Fields field = fieldsList.get(position);
         holder.txt_title.setText(result.getWebTitle());
         holder.txt_date.setText(result.getWebPublicationDate());
-        Picasso.get().load(field.getThumbnail()).into(holder.img_rc);
+        Picasso.get().load(result.getFields().getThumbnail()).into(holder.img_rc);
 
     }
 

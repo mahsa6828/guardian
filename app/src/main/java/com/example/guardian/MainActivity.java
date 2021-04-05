@@ -13,6 +13,7 @@ import com.example.guardian.api.WebServiceCaller;
 import com.example.guardian.model.Fields;
 import com.example.guardian.model.IMessageListener;
 import com.example.guardian.model.News;
+import com.example.guardian.model.Result;
 
 import java.util.List;
 
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     WebServiceCaller webServiceCaller;
     Toolbar toolbar;
     RecyclerView recyclerView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
