@@ -11,8 +11,10 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.guardian.R;
+import com.example.guardian.model.Fields;
 import com.example.guardian.model.News;
 import com.example.guardian.model.Result;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -21,9 +23,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
     Context context;
     List<Result> resultList;
-    public NewsAdapter(Context context,List<Result> resultList){
+    List<Fields> fieldsList;
+    public NewsAdapter(Context context,List<Result> resultList,List<Fields> fieldsList){
         this.context=context;
         this.resultList=resultList;
+        this.fieldsList=fieldsList;
 
     }
     @NonNull
@@ -37,8 +41,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
     @Override
     public void onBindViewHolder(@NonNull NewsVH holder, int position) {
         Result result = resultList.get(position);
+        Fields field = fieldsList.get(position);
         holder.txt_title.setText(result.getWebTitle());
         holder.txt_date.setText(result.getWebPublicationDate());
+        Picasso.get().load(field.getThumbnail()).into(holder.img_rc);
 
     }
 

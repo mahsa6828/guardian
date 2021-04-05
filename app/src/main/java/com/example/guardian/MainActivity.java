@@ -10,6 +10,7 @@ import android.util.Log;
 
 import com.example.guardian.adapter.NewsAdapter;
 import com.example.guardian.api.WebServiceCaller;
+import com.example.guardian.model.Fields;
 import com.example.guardian.model.IMessageListener;
 import com.example.guardian.model.News;
 
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void onsucess(Object responseMessage) {
                 Log.e("","");
                 News news = (News)responseMessage;
-                NewsAdapter newsAdapter = new NewsAdapter(getApplicationContext(),  news.getResponse().getResults());
+                NewsAdapter newsAdapter = new NewsAdapter(getApplicationContext(),news.getResponse().getResults());
                 recyclerView.setAdapter(newsAdapter);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),RecyclerView.VERTICAL,false));
 
