@@ -52,6 +52,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsVH> {
             public void onClick(View view) {
                 Intent intent = new Intent(context, NewsActivity.class);
                 intent.putExtra("webUrl",result.getWebUrl());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 context.startActivity(intent);
             }
         });
